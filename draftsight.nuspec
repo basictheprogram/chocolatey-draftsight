@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
-    <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>draftsight</id>
-    <version>2018.03</version>
-    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/draftsight</packageSourceUrl>
+    <version>2019.00</version>
+    <packageSourceUrl>https://github.com/basictheprogram/chocolatey-draftsight</packageSourceUrl>
     <owners>Teknowledgist, BasicTheProgram</owners>
-    <!-- == SOFTWARE SPECIFIC SECTION == -->
-    <title>Draftsight 2018 SP3</title>
+    <title>Draftsight 2019 SP0</title>
     <authors>Dassault Systèmes</authors>
     <projectUrl>https://www.3ds.com/products-services/draftsight-cad-software/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/draftsight2018_icon.png</iconUrl>
-    <copyright>Copyright © 2016 Dassault Systèmes</copyright>
+    <iconUrl>https://cdn.rawgit.com/basictheprogram/chocolatey-draftsight/master/draftsight2019_icon.png</iconUrl>
+    <copyright>Copyright © 2019 Dassault Systèmes</copyright>
     <licenseUrl>https://www.3ds.com/products-services/draftsight-cad-software/eula</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <mailingListUrl>https://www.3ds.com/products-services/draftsight-cad-software/community/</mailingListUrl>
@@ -29,7 +26,7 @@ DraftSight will work for 30 days before requiring free, per-user registration.  
 [--](https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/automatic/draftsight/bypass.png)
 
     </description>
-    <releaseNotes>https:\\www.3ds.com\fileadmin/PRODUCTS-SERVICES/DRAFTSIGHT/PDF/DraftSight_2018_SP3_Release_Notes_v1.pdf</releaseNotes>
+    <releaseNotes>https://www.draftsight.com/media/whats-new-draftsight-2019</releaseNotes>
     <dependencies> 
     </dependencies>
   </metadata>
