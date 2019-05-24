@@ -8,7 +8,7 @@
     <owners>BasicTheProgram</owners>
     <licenseUrl>https://www.3ds.com/products-services/draftsight-cad-software/eula</licenseUrl>
     <projectUrl>https://www.3ds.com/products-services/draftsight-cad-software/</projectUrl>
-    <iconUrl>https://basictheprogram.github.io/chocolatey-draftsight/v2018.02/icons/draftsight2018_icon.png</iconUrl>
+    <iconUrl>https://basictheprogram.github.io/chocolatey-draftsight/icons/draftsight2018_icon.png</iconUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>DraftSight is a professional-grade 2D design and drafting solution that lets you create, edit, view and markup any kind of 2D drawing.
 Its familiar user interface makes it easy to transition from other comparable CAD applications.
