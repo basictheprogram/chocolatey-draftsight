@@ -1,9 +1,10 @@
 ﻿$ErrorActionPreference = 'Stop'; # stop on all errors
 
-$packageName    = 'DraftSight'
-$toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$fileLocation64 = Join-Path $toolsDir "$packageName.exe"
-$checkSum64     = '13674dd8f80396f8ce225380703a1d4970a58c7cffbd2543c009c8740562a2d1'
+$packageName = 'DraftSight'
+$url         = 'http://dl-ak.solidworks.com/nonsecure/draftsight/2018SP2/DraftSight32.exe'
+$url64       = 'http://dl-ak.solidworks.com/nonsecure/draftsight/2018SP2/DraftSight64.exe'
+$checkSum    = 'a0ae68df48ea2d3d8e77d0a6ec3dd25dd2727911be34d75d5deef459c1789682'
+$checkSum64  = '75a94dfccfd6210059ed17deefcfefb1ac7e10dc785f9fdf73c62cab94711bad'
 
 # if an older version of DraftSight has been run, the API service will prevent upgrading it.
 if (Get-Service -DisplayName "Draftsight API Service*" | Where {$_.status -eq 'running'}) {
@@ -12,9 +13,22 @@ if (Get-Service -DisplayName "Draftsight API Service*" | Where {$_.status -eq 'r
 
 $WorkSpace = Join-Path $env:TEMP "$packageName.$env:chocolateyPackageVersion"
 
+$WebFileArgs = @{
+   packageName  = $packageName
+   FileFullPath = Join-Path $WorkSpace "$packageName.exe"
+   Url          = $url
+   Url64bit     = $url64
+   Checksum     = $checkSum
+   Checksum64   = $checkSum64
+   ChecksumType = 'sha256'
+   GetOriginalFileName = $true
+}
+
+$PackedInstaller = Get-ChocolateyWebFile @WebFileArgs
+
 $UnzipArgs = @{
    PackageName  = $packageName
-   FileFullPath = $fileLocation64 
+   FileFullPath = $PackedInstaller
    Destination  = $WorkSpace
 }
 
@@ -24,7 +38,7 @@ $InstallArgs = @{
    PackageName    = $packageName
    File           = Join-Path $WorkSpace "$packageName.msi"
    fileType       = 'msi'
-   silentArgs     = "/qn /norestart /l*v `"$($env:TEMP)\$($packageName).$($env:chocolateyPackageVersion).MsiInstall.log`" ALLUSERS=1 APIINSTALL=0 LICENSETYPE=0"
+   silentArgs     = "/qn /norestart /l*v `"$($env:TEMP)\$($packageName).$($env:chocolateyPackageVersion).MsiInstall.log`" ALLUSERS=1"
    validExitCodes = @(0, 3010, 1641)
 }
 
