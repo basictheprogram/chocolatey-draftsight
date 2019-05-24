@@ -3,12 +3,12 @@
   <metadata>
     <id>draftsight</id>
     <version>2019.00</version>
-    <packageSourceUrl>https://github.com/basictheprogram/chocolatey-draftsight</packageSourceUrl>
+    <packageSourceUrl>https://github.com/basictheprogram/chocolatey-draftsight/tree/v2019</packageSourceUrl>
     <owners>Teknowledgist, BasicTheProgram</owners>
     <title>Draftsight 2019 SP0</title>
     <authors>Dassault Systèmes</authors>
     <projectUrl>https://www.3ds.com/products-services/draftsight-cad-software/</projectUrl>
-    <iconUrl>https://basictheprogram.github.io/chocolatey-draftsight/draftsight2019_icon.png</iconUrl>
+    <iconUrl>https://basictheprogram.github.io/chocolatey-draftsight/icons/draftsight2019_icon.png</iconUrl>
     <copyright>Copyright © 2019 Dassault Systèmes</copyright>
     <licenseUrl>https://www.3ds.com/products-services/draftsight-cad-software/eula</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
