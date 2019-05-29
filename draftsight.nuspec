@@ -26,4 +26,7 @@ DraftSight will work for 30 days before requiring free, per-user registration.  
     <packageSourceUrl>https://github.com/basictheprogram/chocolatey-draftsight/tree/v2018.03</packageSourceUrl>
     <mailingListUrl>https://www.3ds.com/products-services/draftsight-cad-software/community/</mailingListUrl>
   </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
 </package>
